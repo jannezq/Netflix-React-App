@@ -1,7 +1,7 @@
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import "./MyComponentsCss.css";
 import logo from "../assests/netflix_logo.png";
-import avatar from "../assests/avatar.png";
+// import avatar from "../assests/avatar.png";
 
 const MyNav = () => {
   return (

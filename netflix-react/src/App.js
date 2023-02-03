@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <MyNavbar />
-      <Header />
+      <Header h3Content="Movies" />
     </div>
   );
 }

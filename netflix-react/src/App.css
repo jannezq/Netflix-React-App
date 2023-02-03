@@ -69,6 +69,21 @@ body {
   background-color: var(--home-bg-color);
 }
 
+h2 {
+  color: white;
+  width: 200px;
+}
+
+.genreheader a {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+}
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
 .icon {
   margin: 4px 10px;
 }
@@ -86,6 +101,11 @@ body {
 
 .genre-button {
   margin-left: 4em;
+}
+
+.button-area {
+  background-color: var(--home-bg-color) !important;
+  border: 1px solid white !important;
 }
 
 .movie-row {
