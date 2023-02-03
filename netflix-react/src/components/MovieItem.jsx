@@ -1,8 +1,19 @@
 import { Component } from "react";
+import "./MyComponentsCss.css";
 
 class MovieItem extends Component {
   render() {
-    return <h2>tesing</h2>;
+    return (
+      <>
+        <div className="movie-item">
+          <img
+            className="movie-image"
+            src={this.props.movieObject.Poster}
+            alt=""
+          />
+        </div>
+      </>
+    );
   }
 }
 

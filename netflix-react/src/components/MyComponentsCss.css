@@ -118,3 +118,8 @@ input[type="checkbox"] {
   transform: scale(1.5);
   margin-bottom: 10px;
 }
+
+.movie-item {
+  padding: 0 4px;
+  display: inline-block;
+}
