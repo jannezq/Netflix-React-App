@@ -6,6 +6,7 @@ import MyNavbar from "./components/MyNavbar";
 import Header from "./components/Header";
 // import MovieList from "./components/MovieList";
 import CarouselMovies from "./components/CarouselMovies";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <CarouselMovies movieTitle="Harry Potter" />
       <CarouselMovies movieTitle="Lord of the rings" />
       <CarouselMovies movieTitle="Marvel" />
+      <Footer />
     </div>
   );
 }

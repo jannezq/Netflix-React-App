@@ -94,7 +94,7 @@ class MovieList extends Component {
         {/* <Carousel>
           <CarouselItem> */}
         <Row className="movie-row d-flex justify-content-center">
-          {this.state.moviesArray.slice(0, 5).map((movieObject) => {
+          {this.state.moviesArray.slice(0, 6).map((movieObject) => {
             return (
               <Col xs={12} sm={6} md={4} lg={3} xl={2} key={movieObject.imdbID}>
                 <MovieItem movieObject={movieObject} />;
