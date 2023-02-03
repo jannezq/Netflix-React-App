@@ -32,14 +32,14 @@ class MovieList extends Component {
       } else {
         this.setState({
           ...this.state,
-          isLoading: true,
+          isLoading: false,
           isError: true,
         });
       }
     } catch (error) {
       this.setState({
         ...this.state,
-        isLoading: true,
+        isLoading: false,
         isError: true,
       });
       console.log(error);
@@ -72,14 +72,11 @@ class MovieList extends Component {
     // };
     return (
       <>
-        <div>
-          {this.state.isLoading && (
-            <Spinner animation="border" variant="info" />
-          )}
-          {this.state.isError && (
-            <Alert variant="danger">Oww snap...Something went wrong 😐</Alert>
-          )}
-        </div>
+        {this.state.isLoading && <Spinner animation="border" variant="info" />}
+        {this.state.isError && (
+          <Alert variant="danger">Oww snap...Something went wrong 😐</Alert>
+        )}
+
         {/* <Carousel responsive={responsive}>
           {this.state.moviesArray.map((movieObject) => {
             return <MovieItem movieObject={movieObject} />;
