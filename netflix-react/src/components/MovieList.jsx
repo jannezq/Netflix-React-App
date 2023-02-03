@@ -1,12 +1,5 @@
 import { Component } from "react";
-import {
-  Row,
-  Col,
-  Spinner,
-  Alert,
-  Carousel,
-  CarouselItem,
-} from "react-bootstrap";
+import { Row, Col, Spinner, Alert } from "react-bootstrap";
 // import Carousel from "react-multi-carousel";
 import MovieItem from "./MovieItem";
 import "./MyComponentsCss.css";
