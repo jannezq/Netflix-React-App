@@ -58,8 +58,9 @@ body {
   margin-bottom: 50px;
 }
 .movie-cover {
-  width: 99%;
+  width: 100%;
   transition: 0.3s;
+  position: relative;
   opacity: 0.7;
 }
 .movie-cover:hover {
@@ -67,6 +68,31 @@ body {
   transition: 0.3s;
   cursor: pointer;
   transform: scale(1.05);
+}
+
+.show-card {
+  position: relative;
+  transition: transform 0.5s;
+}
+.show-card:hover {
+  transform: scale(1.2);
+  z-index: 2;
+  box-shadow: 0 0 17px -2px #1e2122;
+}
+
+.infos-container {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  z-index: 2;
+  background-color: #b6b4b4;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.5s;
+}
+
+.show-card:hover .infos-container {
+  box-shadow: 0 0 17px -2px #1e2122;
+  opacity: 1;
 }
 
 .carousel-control-next {

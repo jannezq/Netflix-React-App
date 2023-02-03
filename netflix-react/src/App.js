@@ -1,5 +1,6 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+// import "react-multi-carousel/lib/styles.css";
 import "./components/MyComponentsCss.css";
 import MyNavbar from "./components/MyNavbar";
 import Header from "./components/Header";
