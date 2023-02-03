@@ -5,13 +5,12 @@ class MovieItem extends Component {
   render() {
     return (
       <>
-        <div className="movie-item">
-          <img
-            className="movie-image"
-            src={this.props.movieObject.Poster}
-            alt=""
-          />
-        </div>
+        <img
+          key={this.props.movieObject.imbdID}
+          className="movie-cover"
+          src={this.props.movieObject.Poster}
+          alt={this.props.movieObject.Title}
+        />
       </>
     );
   }

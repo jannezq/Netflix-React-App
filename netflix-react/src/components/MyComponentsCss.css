@@ -123,3 +123,7 @@ input[type="checkbox"] {
   padding: 0 4px;
   display: inline-block;
 }
+
+.movieName {
+  color: white;
+}

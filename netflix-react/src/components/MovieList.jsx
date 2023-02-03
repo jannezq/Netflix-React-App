@@ -5,12 +5,13 @@ import MovieItem from "./MovieItem";
 class MovieList extends Component {
   state = {
     moviesArray: [],
-    harry_url: "http://www.omdbapi.com/?apikey=8787cd52&s=harry%20potter",
+    url: "http://www.omdbapi.com/?apikey=8787cd52&s=",
+    searchTitle: this.props.movieTitle,
   };
 
   fetchMovies = async () => {
     try {
-      let response = await fetch(this.state.harry_url, {
+      let response = await fetch(this.state.url + this.state.searchTitle, {
         method: "GET",
       });
       if (response.ok) {
@@ -38,7 +39,7 @@ class MovieList extends Component {
         <Row>
           {this.state.moviesArray.map((movieObject) => {
             return (
-              <Col key={movieObject.imdbID}>
+              <Col className="mx-0" key={movieObject.imdbID}>
                 <MovieItem movieObject={movieObject} />
               </Col>
             );
