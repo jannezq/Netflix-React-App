@@ -5,7 +5,7 @@ class MovieItem extends Component {
   render() {
     return (
       <>
-        <div className="movie-cover mx-3">
+        <div className="movie-cover mx-3 show-card">
           <img
             key={this.props.movieObject.imbdID}
             src={this.props.movieObject.Poster}

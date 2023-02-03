@@ -13,9 +13,9 @@ function App() {
     <div className="App">
       <MyNavbar />
       <Header h3Content="Movies" />
+      <CarouselMovies movieTitle="Marvel" />
       <CarouselMovies movieTitle="Harry Potter" />
       <CarouselMovies movieTitle="Lord of the rings" />
-      <CarouselMovies movieTitle="Marvel" />
       <Footer />
     </div>
   );
