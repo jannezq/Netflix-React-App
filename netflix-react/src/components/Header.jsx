@@ -11,7 +11,7 @@ class Header extends Component {
               <Col className="d-flex flex-row">
                 <h2 className="text-left">{this.props.h3Content}</h2>
                 <NavDropdown
-                  title="Avatar"
+                  title="Genre"
                   id="collasible-nav-dropdown"
                   className="dropdown-menu-right genreheader"
                   variant="dark"

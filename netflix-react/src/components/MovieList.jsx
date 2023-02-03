@@ -7,7 +7,6 @@ import "./MyComponentsCss.css";
 class MovieList extends Component {
   state = {
     moviesArray: [],
-    url: "http://www.omdbapi.com/?apikey=8787cd52&s=",
     searchTitle: this.props.movieTitle,
     isLoading: true,
     isError: false,
@@ -15,9 +14,12 @@ class MovieList extends Component {
 
   fetchMovies = async () => {
     try {
-      let response = await fetch(this.state.url + this.state.searchTitle, {
-        method: "GET",
-      });
+      let response = await fetch(
+        "http://www.omdbapi.com/?apikey=8787cd52&s=" + this.state.searchTitle,
+        {
+          method: "GET",
+        }
+      );
       if (response.ok) {
         let moviesDataRaw = await response.json();
         let moviesData = moviesDataRaw.Search;

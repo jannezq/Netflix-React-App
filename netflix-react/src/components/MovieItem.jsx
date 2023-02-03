@@ -12,11 +12,11 @@ class MovieItem extends Component {
             alt={this.props.movieObject.Title}
             className="imageCover"
           />
-          <div class="infos-container">
-            <h6 class="ml-3">{this.props.movieObject.Title}</h6>
-            <p class="ml-3 mb-1">
+          <div className="infos-container">
+            <h6 className="ml-3">{this.props.movieObject.Title}</h6>
+            <p className="ml-3 mb-1">
               Year: {this.props.movieObject.Year}
-              <span class="ml-3 mb-1">
+              <span className="ml-3 mb-1">
                 {" "}
                 Type: {this.props.movieObject.Type}
               </span>
