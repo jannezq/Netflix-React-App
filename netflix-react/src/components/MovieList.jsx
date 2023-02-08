@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { Row, Col, Spinner, Alert } from "react-bootstrap";
 // import Carousel from "react-multi-carousel";
-import MovieItem from "./MovieItem";
+import SingleMovie from "./SingleMovie";
 import "./MyComponentsCss.css";
 import { Link } from "react-router-dom";
 
@@ -91,7 +91,7 @@ class MovieList extends Component {
             return (
               <Col xs={12} sm={6} md={4} lg={3} xl={2} key={movieObject.imdbID}>
                 <Link to={`/moviedetails/` + movieObject.imdbID}>
-                  <MovieItem movieObject={movieObject} />;
+                  <SingleMovie movieObject={movieObject} />;
                 </Link>
               </Col>
             );
