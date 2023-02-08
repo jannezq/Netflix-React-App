@@ -19,25 +19,22 @@ function App() {
         <MyNavbar />
         <Header h3Content="Movies" />
         <Routes>
-          <Route
-            element={<Gallery movieTitle="Marvel" />}
-            path="/galleryMarvel"
-          />
+          <Route element={<Gallery movieTitle="Marvel" />} path="/movies" />
           <Route
             element={<Gallery movieTitle="Harry Potter" />}
-            path="/galleryMarvel"
+            path="/galleryPotter"
           />
           <Route
             element={<Gallery movieTitle="Lord of the rings" />}
-            path="/galleryMarvel"
+            path="/galleryLord"
           />
           <Route
             element={<Gallery movieTitle="Horror" />}
-            path="/galleryMarvel"
+            path="/galleryHorror"
           />
           <Route
             element={<Gallery movieTitle="Star wars" />}
-            path="/galleryMarvel"
+            path="/galleryWars"
           />{" "}
           <Route element={<TVShows />} path="/tv-shows" />
           <Route element={<MovieDetails />} path="/moviedetails/:movieId" />

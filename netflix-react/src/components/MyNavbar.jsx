@@ -1,7 +1,7 @@
 import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 import "./MyComponentsCss.css";
 import logo from "../assests/netflix_logo.png";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 // import avatar from "../assests/avatar.png";
 
 const MyNav = (props) => {
@@ -9,8 +9,6 @@ const MyNav = (props) => {
 
   const location = useLocation();
   console.log("The location object: ", location);
-
-  const navigate = useNavigate();
 
   return (
     <Navbar id="navigation-bar" collapseOnSelect expand="lg" variant="dark">
@@ -25,7 +23,9 @@ const MyNav = (props) => {
           <Link to="/">
             <div
               className={
-                location.pathname === "/" ? "nav-link active" : "nav-link"
+                location.pathname === "/galleryPotter"
+                  ? "nav-link active"
+                  : "nav-link"
               }
             >
               Home
@@ -42,12 +42,17 @@ const MyNav = (props) => {
               TV Shows
             </div>
           </Link>
-          <Nav.Link href="#pricing">Movies</Nav.Link>
+          <Link to="/movies">
+            <div
+              className={
+                location.pathname === "/movies" ? "nav-link active" : "nav-link"
+              }
+            >
+              Movies
+            </div>
+          </Link>
           <Nav.Link href="#pricing">Recently Added</Nav.Link>
           <Nav.Link href="#pricing">My List</Nav.Link>
-          <Button variant="warning" onClick={() => navigate("/")}>
-            GO HOME
-          </Button>
         </Nav>
         <Nav>
           <Nav.Link className="nav-link active" aria-current="page" href="#">

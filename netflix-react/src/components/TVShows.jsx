@@ -1,9 +1,13 @@
+import { Container } from "react-bootstrap";
+import MovieList from "./MovieList";
+
 const TVShows = () => {
   return (
-    <div className="text-center">
-      <h1>Testing</h1>
-      <h2>Tv Shows work in progress</h2>
-    </div>
+    <Container fluid className="mt-4 mx-3">
+      <Container fluid className="mt-3 pl-0">
+        <MovieList movieTitle="Harry Potter" />
+      </Container>
+    </Container>
   );
 };
 

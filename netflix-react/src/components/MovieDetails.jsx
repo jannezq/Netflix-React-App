@@ -5,25 +5,23 @@ import { useParams } from "react-router-dom";
 const MovieDetails = () => {
   const params = useParams();
   console.log("PARAMS ARE: ", params);
-
   console.log("The id of this movie is: ", params.movieId);
-
-  const [movieObj, setMovieObj] = useState(null);
-  console.log("movie object: ", movieObj);
+  const movieId = params.movieId;
+  const [movieObj, setMovieObj] = useState({});
 
   const fetchMovies = async () => {
     try {
       let response = await fetch(
-        "http://www.omdbapi.com/?apikey=8787cd52&s=" + params.movieId,
+        "http://www.omdbapi.com/?apikey=8787cd52&s=" + movieId,
         {
           method: "GET",
         }
       );
+      //   console.log(response);
       if (response.ok) {
         let moviesDataRaw = await response.json();
-        setMovieObj(moviesDataRaw.Search);
-
-        console.log("Movie object:".movieObj);
+        console.log("movie object: ", moviesDataRaw);
+        setMovieObj(moviesDataRaw);
       } else {
         alert("Error");
       }
@@ -34,12 +32,12 @@ const MovieDetails = () => {
 
   useEffect(() => {
     fetchMovies();
-    let foundMovieObject = movieObj.find((movie) => movie.movieId.toString);
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [movieId]);
   return (
     <>
       <Container className="justify-content-center">
-        <h1 className="text-center movieHeader mt-3">Movie title goes here!</h1>
+        <h1 className="text-center movieHeader mt-3">{movieObj.Title}</h1>
         <Card>
           <Card.Img variant="top" src="holder.js/100px180" />
           <Card.Body>
