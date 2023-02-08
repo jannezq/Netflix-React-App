@@ -12,10 +12,7 @@ const MovieDetails = () => {
   const fetchMovies = async () => {
     try {
       let response = await fetch(
-        "http://www.omdbapi.com/?apikey=8787cd52&s=" + movieId,
-        {
-          method: "GET",
-        }
+        "http://www.omdbapi.com/?apikey=8787cd52&i=" + movieId
       );
       //   console.log(response);
       if (response.ok) {
@@ -37,17 +34,25 @@ const MovieDetails = () => {
   return (
     <>
       <Container className="justify-content-center">
-        <h1 className="text-center movieHeader mt-3">{movieObj.Title}</h1>
-        <Card>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-          </Card.Body>
-        </Card>
+        <div className="card-movie-detail">
+          <h1 className="text-center movieHeader mt-3">{movieObj.Title}</h1>
+          <Card>
+            <Card.Img
+              variant="top"
+              src={movieObj.Poster}
+              className="imageCover"
+            />
+            <Card.Body>
+              <Card.Title>{movieObj.Title}</Card.Title>
+              <Card.Text>
+                <b>Plot:</b> {movieObj.Plot}
+              </Card.Text>
+              <Card.Text>
+                <b>Released:</b> {movieObj.Released}
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </div>
       </Container>
     </>
   );

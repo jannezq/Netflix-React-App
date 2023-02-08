@@ -158,3 +158,8 @@ input[type="checkbox"] {
   text-align: center !important;
   color: white;
 }
+
+.card-movie-detail {
+  width: 400px;
+  margin-inline: auto;
+}
