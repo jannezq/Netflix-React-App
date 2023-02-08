@@ -3,7 +3,7 @@ import { Container } from "react-bootstrap";
 import MovieList from "./MovieList";
 import "./MyComponentsCss.css";
 
-class CarouselMovies extends Component {
+class Gallery extends Component {
   render() {
     return (
       <>
@@ -18,4 +18,4 @@ class CarouselMovies extends Component {
   }
 }
 
-export default CarouselMovies;
+export default Gallery;

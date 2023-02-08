@@ -8,11 +8,11 @@ const MyNav = (props) => {
   // console.log(props);
 
   const location = useLocation();
-  console.log("The location object: ", location);
+  // console.log("The location object: ", location);
 
   return (
     <Navbar id="navigation-bar" collapseOnSelect expand="lg" variant="dark">
-      <Link to="/">
+      <Link to="/galleryHorror">
         <Navbar.Brand>
           <img id="logo" src={logo} alt="" />
         </Navbar.Brand>
@@ -20,10 +20,10 @@ const MyNav = (props) => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <Link to="/">
+          <Link to="/galleryHorror">
             <div
               className={
-                location.pathname === "/galleryPotter"
+                location.pathname === "/galleryHorror"
                   ? "nav-link active"
                   : "nav-link"
               }
@@ -51,8 +51,24 @@ const MyNav = (props) => {
               Movies
             </div>
           </Link>
-          <Nav.Link href="#pricing">Recently Added</Nav.Link>
-          <Nav.Link href="#pricing">My List</Nav.Link>
+          <Link to="/">
+            <div
+              className={
+                location.pathname === "/" ? "nav-link active" : "nav-link"
+              }
+            >
+              Recently Added
+            </div>
+          </Link>
+          <Link to="/">
+            <div
+              className={
+                location.pathname === "/" ? "nav-link active" : "nav-link"
+              }
+            >
+              My List
+            </div>
+          </Link>
         </Nav>
         <Nav>
           <Nav.Link className="nav-link active" aria-current="page" href="#">

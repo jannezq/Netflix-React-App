@@ -25,20 +25,12 @@ function App() {
             path="/galleryPotter"
           />
           <Route
-            element={<Gallery movieTitle="Lord of the rings" />}
-            path="/galleryLord"
-          />
-          <Route
             element={<Gallery movieTitle="Horror" />}
             path="/galleryHorror"
           />
-          <Route
-            element={<Gallery movieTitle="Star wars" />}
-            path="/galleryWars"
-          />{" "}
           <Route element={<TVShows />} path="/tv-shows" />
           <Route element={<MovieDetails />} path="/moviedetails/:movieId" />
-          {/* <Route element={<NotFound />} path="*" /> */}
+          <Route element={<NotFound />} path="*" />
         </Routes>
 
         {/* <Gallery movieTitle="Harry Potter" /> */}
