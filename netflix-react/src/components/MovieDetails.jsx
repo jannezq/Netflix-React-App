@@ -35,7 +35,7 @@ const MovieDetails = () => {
   useEffect(() => {
     fetchMovies();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [movieId]);
+  }, []);
   return (
     <>
       <Container className="justify-content-center">

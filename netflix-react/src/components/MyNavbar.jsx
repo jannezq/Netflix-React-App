@@ -12,7 +12,7 @@ const MyNav = (props) => {
 
   return (
     <Navbar id="navigation-bar" collapseOnSelect expand="lg" variant="dark">
-      <Link to="/galleryHorror">
+      <Link to="/">
         <Navbar.Brand>
           <img id="logo" src={logo} alt="" />
         </Navbar.Brand>
@@ -20,12 +20,10 @@ const MyNav = (props) => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <Link to="/galleryHorror">
+          <Link to="/">
             <div
               className={
-                location.pathname === "/galleryHorror"
-                  ? "nav-link active"
-                  : "nav-link"
+                location.pathname === "/" ? "nav-link active" : "nav-link"
               }
             >
               Home
@@ -51,19 +49,19 @@ const MyNav = (props) => {
               Movies
             </div>
           </Link>
-          <Link to="/">
+          <Link to="/sasd">
             <div
               className={
-                location.pathname === "/" ? "nav-link active" : "nav-link"
+                location.pathname === "/asda" ? "nav-link active" : "nav-link"
               }
             >
               Recently Added
             </div>
           </Link>
-          <Link to="/">
+          <Link to="/asas">
             <div
               className={
-                location.pathname === "/" ? "nav-link active" : "nav-link"
+                location.pathname === "/dasda" ? "nav-link active" : "nav-link"
               }
             >
               My List

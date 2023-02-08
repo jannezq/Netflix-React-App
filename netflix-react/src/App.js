@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TVShows from "./components/TVShows";
 import MovieDetails from "./components/MovieDetails";
+import Home from "./components/Home";
 import NotFound from "./components/NotFound";
 
 function App() {
@@ -19,15 +20,12 @@ function App() {
         <MyNavbar />
         <Header h3Content="Movies" />
         <Routes>
-          <Route element={<Gallery movieTitle="Marvel" />} path="/movies" />
+          <Route element={<Home />} path="/" />
           <Route
             element={<Gallery movieTitle="Harry Potter" />}
             path="/galleryPotter"
           />
-          <Route
-            element={<Gallery movieTitle="Horror" />}
-            path="/galleryHorror"
-          />
+          <Route element={<Gallery movieTitle="Marvel" />} path="/movies" />
           <Route element={<TVShows />} path="/tv-shows" />
           <Route element={<MovieDetails />} path="/moviedetails/:movieId" />
           <Route element={<NotFound />} path="*" />
