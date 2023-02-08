@@ -1,22 +1,53 @@
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 import "./MyComponentsCss.css";
 import logo from "../assests/netflix_logo.png";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 // import avatar from "../assests/avatar.png";
 
-const MyNav = () => {
+const MyNav = (props) => {
+  // console.log(props);
+
+  const location = useLocation();
+  console.log("The location object: ", location);
+
+  const navigate = useNavigate();
+
   return (
     <Navbar id="navigation-bar" collapseOnSelect expand="lg" variant="dark">
-      <Navbar.Brand href="#home">
-        <img id="logo" src={logo} alt="" />
-      </Navbar.Brand>
+      <Link to="/">
+        <Navbar.Brand>
+          <img id="logo" src={logo} alt="" />
+        </Navbar.Brand>
+      </Link>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="#features">Home</Nav.Link>
-          <Nav.Link href="#pricing">Tv Shows</Nav.Link>
+          <Link to="/">
+            <div
+              className={
+                location.pathname === "/" ? "nav-link active" : "nav-link"
+              }
+            >
+              Home
+            </div>
+          </Link>
+          <Link to="/tv-shows">
+            <div
+              className={
+                location.pathname === "/tv-shows"
+                  ? "nav-link active"
+                  : "nav-link"
+              }
+            >
+              TV Shows
+            </div>
+          </Link>
           <Nav.Link href="#pricing">Movies</Nav.Link>
           <Nav.Link href="#pricing">Recently Added</Nav.Link>
           <Nav.Link href="#pricing">My List</Nav.Link>
+          <Button variant="warning" onClick={() => navigate("/")}>
+            GO HOME
+          </Button>
         </Nav>
         <Nav>
           <Nav.Link className="nav-link active" aria-current="page" href="#">

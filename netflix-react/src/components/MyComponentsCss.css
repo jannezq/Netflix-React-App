@@ -153,3 +153,8 @@ input[type="checkbox"] {
 .movieName {
   color: white;
 }
+
+.movieHeader {
+  text-align: center !important;
+  color: white;
+}
